@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Accueil from './pages/Accueil/accueil';
+import RoadMapPage from './pages/RoadMapPage/RoadMapPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SignUp from './pages/SignUp/SignUp.js';
+import Mdpcontent from './components/mdpcontent/mdpcontent.js';
+import Perso from './pages/Personage/Perso';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Accueil />} />
+        <Route path='/roadmap' element={<RoadMapPage />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/begin' element={<SignUp />} />
+        <Route path='/mdp' element={<Mdpcontent />} />
+        <Route path='/perso' element={<Perso />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
