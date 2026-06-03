@@ -1,0 +1,536 @@
+.sqr1,
+.sqr2,
+.sqr3,
+.sqr4 {
+    background-color: rgba(90, 112, 160, 0.68);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.lsqr {
+    background-color: rgba(90, 112, 160, 0.68);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.sqr5
+
+/*nombrede requetes*/
+    {
+    background-color: rgba(90, 112, 160, 0.68);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    overflow: hidden;
+}
+
+.wsqr
+
+/*difficulté des sections*/
+    {
+    background-color: rgba(90, 112, 160, 0.68);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        /* Une seule colonne sur écrans petits */
+        grid-template-rows: auto;
+        /* Hauteur automatique pour chaque élément */
+        width: 100%;
+        /* Pleine largeur sur mobile */
+    }
+
+    /* Réinitialiser les positions des carrés pour une disposition verticale */
+    .sqr1,
+    .sqr2,
+    .sqr3,
+    .sqr4,
+    .lsqr,
+    .wsqr,
+    .sqr5 {
+        grid-area: unset;
+        /* Annule les positions spécifiques */
+    }
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    /*height des carrés*/
+    grid-template-rows: repeat(3, 148px);
+    /*width des carrés*/
+    grid-column-gap: 17px;
+    /*le contenu*/
+    grid-row-gap: 17px;
+    width: calc(100vw - 250px);
+    margin-left: -300px;
+    margin-top: -300px;
+}
+
+.page-title {
+    color: #f7fafc;
+    top: -300px;
+    margin-left: -450px
+}
+
+.sqr1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.sqr2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.sqr3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.sqr4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.lsqr {
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+.wsqr {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.sqr5 {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.dshlogo {
+    max-width: 100%;
+    /* L'image ne dépasse pas la largeur du carré */
+    max-height: 100%;
+    /* L'image ne dépasse pas la hauteur du carré */
+    object-fit: cover;
+    /* Redimensionne l'image pour couvrir tout le carré */
+    /* Arrondit les coins de l'image */
+    position: relative;
+    /* Positionnement relatif */
+    left: -130px;
+    height: 30px;
+    /* Alignement à gauche */
+}
+
+.sqrtext {
+    position: relative;
+    top: -43px;
+    max-width: 100%;
+    /* L'image ne dépasse pas la largeur du carré */
+    max-height: 100%;
+    font-size: 1.0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+
+}
+
+.bigsqrtxt {
+    position: relative;
+    top: -20px;
+    max-width: 100%;
+    /* L'image ne dépasse pas la largeur du carré */
+    max-height: 100%;
+    font-size: 1.0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+
+}
+
+
+
+/* Styles pour la modale */
+.modal-overlay {
+    position: fixed;
+    /* Fixe la modale sur l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Pleine largeur */
+    height: 100%;
+    /* Pleine hauteur */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent */
+    display: flex;
+    /* Utilise Flexbox */
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    z-index: 1000;
+    /* Place la modale au-dessus des autres éléments */
+}
+
+.modal-content {
+    background-color: white;
+    /* Fond blanc pour le contenu */
+    padding: 20px;
+    /* Espacement interne */
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre pour un effet visuel */
+    text-align: center;
+    /* Alignement du texte au centre */
+    width: 300px;
+    /* Largeur fixe */
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    /* Espace sous le titre */
+    font-size: 1.2rem;
+    /* Taille du texte */
+    color: #333;
+    /* Couleur du texte */
+}
+
+.close-modal {
+    margin-top: 15px;
+    /* Espace au-dessus du bouton */
+    padding: 8px 16px;
+    /* Espacement interne */
+    background-color: #dc3545;
+    /* Rouge pour le bouton "Fermer" */
+    color: white;
+    /* Texte en blanc */
+    border: none;
+    /* Pas de bordure */
+    border-radius: 4px;
+    /* Coins arrondis */
+    cursor: pointer;
+    /* Curseur de pointeur */
+    font-size: 0.9rem;
+    /* Taille du texte */
+    transition: background-color 0.3s ease;
+    /* Transition fluide */
+}
+
+.close-modal:hover {
+    background-color: #a71d2a;
+    /* Rouge plus foncé au survol */
+}
+
+/* Flou appliqué à l'arrière-plan lorsque la modale est visible */
+.blurred {
+    filter: blur(5px);
+    /* Applique un flou à toute la page */
+    pointer-events: none;
+    /* Désactive les interactions avec la page */
+}
+
+/* Styles pour le bouton "Choisir les dates" */
+.date-buttn {
+    position: relative;
+    top: 70px;
+    left: 500px;
+    padding: 8px 16px;
+    /* Espacement interne */
+    background-color: rgba(161, 186, 255, 0);
+    /* Couleur de fond bleue */
+    color: white;
+    /* Texte en blanc */
+    border: #ffffff;
+    /* Pas de bordure */
+    border: 0.7px solid;
+    border-radius: 10px;
+    /* Coins arrondis */
+    cursor: pointer;
+    /* Curseur de pointeur */
+    font-size: 0.9rem;
+    /* Taille du texte */
+    transition: background-color 0.3s ease;
+    /* Transition fluide */
+}
+
+.date-buttn:hover {
+    background-color: rgba(161, 186, 255, 0.36);
+    /* Changement de couleur au survol */
+}
+
+.selected-dates-overlay {
+    position: absolute;
+    /* Positionnement absolu par rapport au parent */
+    top: 115px;
+    /* Position sous le bouton */
+    right: 100px;
+    /* Alignement horizontal avec le bouton */
+    text-align: left;
+    /* Alignement du texte à gauche */
+    font-size: 0.9rem;
+    /* Taille du texte */
+    color: #ffffff;
+    /* Couleur du texte (blanc) */
+    z-index: 1;
+    /* Place les dates au-dessus du contenu existant */
+}
+
+.selected-dates-overlay p {
+    margin: 0;
+    /* Supprimer les marges par défaut */
+}
+
+/* Garde tes styles existants pour .sqr-value */
+.sqr-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: -30px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Amélioration des modales */
+.stats-modal {
+    width: 450px;
+    max-width: 90%;
+    padding: 2rem;
+    background: rgba(161, 186, 255, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: #ffffff;
+}
+
+.modal-section {
+    margin: 1.5rem 0;
+}
+
+.modal-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.admin-select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: rgba(161, 186, 255, 0.6);
+    /*WINA DAKHEL SECTION ET NIVEAU*/
+    color: #ffffff;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+}
+
+.admin-select:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.admin-select:disabled {
+    background-color: #f8fafc;
+    color: #a0aec0;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    gap: 12px;
+}
+
+.validate-btn {
+    padding: 12px 24px;
+    background-color: rgb(53, 27, 82);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    height: 45px;
+    top: 13px;
+    width: 100px;
+}
+
+.validate-btn:hover {
+    background-color: rgb(32, 16, 49);
+    transform: translateY(-1px);
+}
+
+.close-modal {
+    padding: 12px 24px;
+    background: white;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.close-modal:hover {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+}
+
+/* Animation pour l'ouverture des modales */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-overlay .modal-content {
+    animation: modalFadeIn 0.3s ease-out forwards;
+}
+
+/* Style pour le titre */
+.stats-modal h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.admin-select option {
+    background-color: rgba(90, 112, 160, 0.9);
+    color: white;
+    padding: 10px;
+}
+
+/* Styles des barres de progression */
+.progress-bar {
+    height: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    top: -15px;
+}
+
+.progress-bar-bg {
+    flex-grow: 1;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Couleurs spécifiques pour chaque section */
+.progress-codage {
+    background: linear-gradient(to right, rgba(139, 92, 246, 1), rgba(81, 54, 144, 1));
+}
+
+.progress-capteurs {
+    background: linear-gradient(to right, rgba(209, 95, 30, 1), rgba(107, 49, 15, 1));
+}
+
+.progress-reseau {
+    background: linear-gradient(to right, rgba(181, 99, 157, 1), rgba(79, 43, 69, 1));
+}
+
+.progress-securite {
+    background: linear-gradient(to right, rgba(117, 111, 196, 1), rgba(56, 53, 94, 1));
+}
+
+.progress-bar-label {
+    min-width: 80px;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+.progress-bar-value {
+    min-width: 40px;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-align: right;
+}
+
+.donut-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.donut-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 13px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.legend-label {
+    font-size: 0.80rem;
+}
+
+.response-count {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #ffffff;
+}

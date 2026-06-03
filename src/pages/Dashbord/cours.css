@@ -1,0 +1,285 @@
+.courspage-wrapper-xzf {
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 75%;
+    /* Keep as is */
+    margin: 0 auto;
+    color: white;
+    margin-left: 280px;
+}
+
+.section-head-xkl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    /* Ensure full width */
+    opacity: 0;
+    animation: slideDown 0.6s ease forwards;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Professional icon styling */
+.circle-icon-opl {
+    width: 48px;
+    height: 48px;
+    background-color: #352b5a;
+    /* Darker, more professional color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.circle-icon-opl:hover {
+    background-color: #433775;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.circle-icon-opl svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Course title - increased size */
+.section-head-xkl h2 {
+    font-size: 28px;
+    /* Increased from 24px */
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Professional button styling with enhanced hover animations */
+.btn-action-zzz {
+    background-color: #28b463;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    min-width: 180px;
+    height: 46px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* New pulsing glow effect */
+.btn-action-zzz::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: -1;
+}
+
+.btn-action-zzz:hover::before {
+    opacity: 0.2;
+    transform: scale(2);
+}
+
+/* Enhanced hover state */
+.btn-action-zzz:active {
+    background-color: #219653;
+    box-shadow: 0 4px 12px rgba(33, 150, 83, 0.6);
+    transform: translateY(-3px) scale(1.03);
+    letter-spacing: 1px;
+}
+
+.add-button:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 5px rgba(40, 180, 99, 0.3);
+}
+
+/* Create a shine effect that moves across the button */
+.btn-action-zzz::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg) translateX(-100%) translateY(-100%);
+    transition: all 0.6s ease;
+    z-index: 2;
+}
+
+.btn-action-zzz:hover::after {
+    transform: rotate(45deg) translateX(100%) translateY(100%);
+}
+
+/* Update icon animation on hover */
+.icon-check-vbn {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-action-zzz:hover .icon-check-vbn {
+    transform: rotate(360deg) scale(1.2);
+    margin-right: 14px;
+}
+
+.icon-check-vbn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Form container with two columns */
+.xzf-form-wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    /* Ensure full width */
+    align-items: stretch;
+    /* Make both columns same height */
+}
+
+/* Left column (form inputs) with professional hover animation */
+.ujk-input-box {
+    flex: 1;
+    background-color: rgba(55, 55, 102, 0.4);
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    opacity: 0;
+    animation: slideInLeft 0.6s ease 0.2s forwards;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.ujk-input-box:hover {
+    background-color: rgba(60, 60, 110, 0.45);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid #6c5ce7;
+    transform: translateY(-4px);
+}
+
+/* Right column (description) with professional hover animation */
+.rtx-desc-block {
+    flex: 1;
+    background-color: rgba(55, 55, 102, 0.4);
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: slideInRight 0.6s ease 0.4s forwards;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.rtx-desc-block:hover {
+    background-color: rgba(60, 60, 110, 0.45);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid #6c5ce7;
+    transform: translateY(-4px);
+}
+
+/* Remove previous after pseudo-elements */
+.ujk-input-box::after,
+.rtx-desc-block::after {
+    content: none;
+}
+
+/* Remove the previous complex corner glow effects */
+.ujk-input-box::before,
+.rtx-desc-block::before,
+.ujk-input-box::after,
+.rtx-desc-block::after {
+    content: none;
+}
+
+/* Add subtle top highlight for professional look */
+.ujk-input-box::after,
+.rtx-desc-block::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.ujk-input-box:hover::after,
+.rtx-desc-block:hover::after {
+    opacity: 1;
+}
+
+/* Input group styling */
+.abc-input-group {
+    margin-bottom: 30px;
+    /* More space between inputs */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.abc-input-group:last-child {
+    margin-bottom: 0;
+}
+
+/* Form labels - increased size and bold */
+label {
+    display: block;
+    font-size: 23px;
+    font-weight: 600;
+    /* Increased from 500 to 600 for bolder text */
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Input fields - with attractive hover/focus animations */
+.form-ttt {
+    width: 100%;
+    background-color: rgba(75, 75, 135, 0.4);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: white;
+    font-size: 16px;
+}

@@ -1,0 +1,214 @@
+.roadmap-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.steps-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    position: relative;
+
+}
+
+.steps-row:last-of-type {
+    margin-bottom: 3500px;
+    /*augmenter l'espace entre les carré du bas */
+}
+
+.roadmap-line-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 60px auto;
+    position: relative;
+}
+
+.roadmap-line {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    border-top: 3px dashed rgba(161, 186, 255, 0.4);
+    z-index: 0;
+}
+
+.step-number {
+    cursor: pointer;
+    background: #7689c0;
+    opacity: 1;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 20px;
+    z-index: 1;
+}
+
+.step-number.active {
+    transform: scale(1.8);
+    background: linear-gradient(100deg, rgb(123, 6, 107), rgba(97, 110, 162, 1));
+    /* animation de changement de couleur*/
+}
+
+.trophy-icon {
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    width: 100px;
+    height: auto;
+}
+
+.step-icon {
+    position: absolute;
+    top: -80px;
+    left: -20%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: auto;
+}
+
+.roadmap-description {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 18px;
+    white-space: normal;
+    margin: 0 auto 40px auto;
+}
+
+
+
+.step-number:hover {
+    transform: scale(1.2);
+    background-color: #7c9df766;
+}
+
+.roadmap-step {
+    background-color: rgba(161, 186, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    opacity: 0.8;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.roadmap-step p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.roadmap-step h3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.roadmap-title {
+    text-align: center;
+    width: fit-content;
+    margin: 50px auto 0;
+    padding: 10px 20px;
+    border: 0px solid #7689c0;
+    border-radius: 10px;
+    background: linear-gradient(280deg, #7689c0, #6c087d, #6d0848);
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.roadmap-button {
+    display: block;
+    margin: 50px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(280deg, #7689c0, #6c087d, #6d0848);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow {
+    width: 60px;
+    height: auto;
+}
+
+.roadmap-button::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #320674, #5d083e, #a1baff);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: gradientAnimation 3s infinite linear;
+}
+
+
+.roadmap-button:hover {
+    transform: scale(1.1);
+    border-color: white;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.roadmap-step.active {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 6px 15px #c31282;
+}

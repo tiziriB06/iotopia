@@ -1,0 +1,123 @@
+[
+    {
+        "type": "qcm",
+        "reponses": [
+            "Wi-Fi",
+            "Bluetooth",
+            "Zigbee",
+            "Ethernet"
+        ],
+        "hint": "Ce protocole est souvent utilisé pour connecter des capteurs sans fil dans les maisons intelligentes.",
+        "question": "Quel protocole de communication sans fil est souvent utilisé en IoT pour sa consommation faible d'énergie ?",
+        "section": "programamtion",
+        "numero": "1/10",
+        "correctAnswer": "Zigbee"
+    },
+    {
+        "type": "qcm",
+        "reponses": [
+            "Stocker de l'énergie",
+            "Contrôler ou amplifier le courant",
+            "Convertir le courant alternatif en continu",
+            "Mesurer la température"
+        ],
+        "hint": "Il joue un rôle similaire à celui d'un interrupteur.",
+        "question": "Quelle est la fonction d'un transistor dans un circuit IoT ?",
+        "section": "programamtion",
+        "numero": "2/10",
+        "correctAnswer": "Contrôler ou amplifier le courant"
+    },
+    {
+        "type": "qcm",
+        "reponses": [
+            "C'est un composant qui convertit un signal analogique en signal numérique, permettant au microcontrôleur de traiter les données.",
+            "C'est un composant qui amplifie le signal pour une meilleure transmission.",
+            "C'est un composant qui stocke les données analogiques.",
+            "C'est un composant qui transforme le courant alternatif en courant continu."
+        ],
+        "hint": "Essentiel pour l'interaction entre capteurs analogiques et processeurs numériques.",
+        "question": "Pourquoi un ADC est important dans un système IoT ?",
+        "section": "programamtion",
+        "numero": "3/10",
+        "correctAnswer": "C'est un composant qui convertit un signal analogique en signal numérique, permettant au microcontrôleur de traiter les données."
+    },
+    {
+        "type": "vrai faux",
+        "reponses": [],
+        "hint": "Le Relais sert à commuter des circuits, pas à traiter des données.",
+        "question": "Le relais est directement lié à l'acquisition ou au traitement de données dans un système IoT.",
+        "section": "programamtion",
+        "numero": "4/10",
+        "correctAnswer": "faux"
+    },
+    {
+        "type": "qcm",
+        "reponses": [
+            "Wi-Fi",
+            "NFC",
+            "Bluetooth",
+            "Zigbee"
+        ],
+        "hint": "Utilisé pour les vidéos ou gros fichiers.",
+        "question": "Quel protocole est le 'bavard' du groupe parce qu'il transfère beaucoup de données rapidement ?",
+        "section": "programamtion",
+        "numero": "5/10",
+        "correctAnswer": "Wi-Fi"
+    },
+    {
+        "type": "libre",
+        "reponses": [],
+        "hint": "Automatiser la gestion de la serre pour optimiser la croissance des plantes tout en minimisant les ressources utilisées.",
+        "question": "Imaginez que vous devez concevoir un système IoT pour surveiller une serre agricole. Quels capteurs et composants incluriez-vous, et pourquoi ?",
+        "code": "",
+        "section": "programamtion",
+        "numero": "6/10",
+        "correctAnswer": "Capteurs : Température/Humidité (suivi climat), Lumière (ajuster éclairage), CO₂ (surveillance air). Composants : Microcontrôleur (traitement), Module Wi-Fi/LoRa (transmission), Relais (contrôle actionneurs comme ventilateurs/arroseurs)."
+    },
+    {
+        "type": "vrai faux",
+        "reponses": [],
+        "hint": "Un LDR est sensible à la lumière ambiante.",
+        "question": "Un LDR (Light Dependent Resistor) mesure l'intensité lumineuse en modifiant sa résistance.",
+        "section": "programamtion",
+        "numero": "7/10",
+        "correctAnswer": "vrai"
+    },
+    {
+        "type": "qcm",
+        "reponses": [
+            "Silicium",
+            "Cuivre",
+            "Oxyde métallique (comme MnO₂ ou NiO)",
+            "Aluminium"
+        ],
+        "hint": "Matériau sensible à la température.",
+        "question": "Quel matériau est couramment utilisé pour fabriquer un capteur de température basé sur une thermistance ?",
+        "section": "programamtion",
+        "numero": "8/10",
+        "correctAnswer": "Oxyde métallique (comme MnO₂ ou NiO)"
+    },
+    {
+        "type": "qcm",
+        "reponses": [
+            "Il génère un courant électrique lorsqu'il est exposé à la lumière.",
+            "Sa résistance diminue lorsque l'intensité lumineuse augmente.",
+            "Il convertit directement la lumière en tension.",
+            "Il amplifie la lumière pour produire un signal numérique."
+        ],
+        "hint": "Fonctionne grâce à un matériau semi-conducteur.",
+        "question": "Comment fonctionne un capteur de lumière (LDR ou photorésistance) ?",
+        "section": "programamtion",
+        "numero": "9/10",
+        "correctAnswer": "Sa résistance diminue lorsque l'intensité lumineuse augmente."
+    },
+    {
+        "type": "vrai faux",
+        "reponses": [],
+        "hint": "MEMS signifie Micro-Electro-Mechanical Systems.",
+        "question": "La technologie MEMS est utilisée pour la fabrication de capteurs de gaz.",
+        "section": "programamtion",
+        "numero": "10/10",
+        "correctAnswer": "vrai"
+    }
+]

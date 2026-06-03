@@ -1,0 +1,40 @@
+{
+    "heroes": [
+        {
+            "id": 1,
+            "name": "LUMA",
+            "level": 3.8,
+            "image": "./images/luna.png",
+            "stats": {
+                "vitesseDeScan": 90,
+                "analyseSemantique": 80,
+                "detectionAnomalie": 70,
+                "resistancePhysique": 40
+            }
+        },
+        {
+            "id": 2,
+            "name": "NOVA",
+            "level": 4.2,
+            "image": "./images/Nova.png",
+            "stats": {
+                "vitesseDeScan": 75,
+                "analyseSemantique": 95,
+                "detectionAnomalie": 85,
+                "resistancePhysique": 60
+            }
+        },
+        {
+            "id": 3,
+            "name": "Axel",
+            "level": 3.5,
+            "image": "./images/Axel.png",
+            "stats": {
+                "vitesseDeScan": 95,
+                "analyseSemantique": 65,
+                "detectionAnomalie": 80,
+                "resistancePhysique": 75
+            }
+        }
+    ]
+}

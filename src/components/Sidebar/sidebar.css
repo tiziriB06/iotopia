@@ -1,0 +1,209 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    background: linear-gradient(-45deg, #28264A, #270739, #2b2145);
+    background-size: 400% 400%;
+    animation: gradientBG 10s infinite alternate;
+    overflow: hidden;
+    color: azure;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+.point {
+    opacity: 100;
+    background-color: rgba(0, 255, 238, 0.5);
+    z-index: -1;
+    left: -150px;
+    top: -150px;
+    width: 450px;
+    height: 180px;
+    filter: blur(100px);
+    position: absolute;
+    border-radius: 40%;
+    margin: 40px auto;
+    animation: movePoint 300ms ease-in-out forwards;
+}
+
+.point1 {
+    opacity: 2;
+    background-color: #403657da;
+    z-index: -1;
+    left: calc(70px + 140px + 300px + 100px + 300px + 110px);
+    top: -160px;
+    width: 300px;
+    height: 450px;
+    filter: blur(10px);
+    position: absolute;
+    border-radius: 800%;
+    margin: 40px auto;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.267);
+    transform: rotate(120deg);
+}
+
+.point2 {
+    opacity: 1.8;
+    background-color: rgba(0, 255, 238, 0.26);
+    z-index: 1;
+    left: 65%;
+    top: 20%;
+    width: 60px;
+    height: 400px;
+    filter: blur(40px);
+    position: absolute;
+    border-radius: 100%;
+    transform: rotate(60deg);
+}
+
+.point3 {
+    opacity: 1.5;
+    background-color: rgba(0, 255, 236, 0.13);
+    z-index: -1;
+    left: -10%;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    filter: blur(30px);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.point5 {
+    opacity: 1;
+    background-color: rgb(40, 38, 74);
+    z-index: -1;
+    right: 45%;
+    top: -10%;
+    width: 200px;
+    height: 380px;
+    filter: blur(30px);
+    position: absolute;
+    border-radius: 130% / 120%;
+    transform: rotate(70deg);
+}
+
+
+.Sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(161, 186, 255, 0.4);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.sidebar-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.icon-logo {
+    width: 190px;
+    height: 90px;
+    pointer-events: none;
+}
+
+
+.profile-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 20px;
+}
+
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    left: 10%;
+}
+
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.profile-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    /* Gras */
+    color: #ffffff;
+    text-align: left;
+    margin-top: 0;
+}
+
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.Sidebar li {
+    display: flex;
+    /* Alignement horizontal des icônes et du texte */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    margin-bottom: 10px;
+    /* Espace entre chaque élément */
+    padding: 10px;
+    /* Ajoute un espace autour du contenu */
+    border-radius: 8px;
+    /* Coins arrondis */
+    transition: all 0.3s ease;
+    /* Animation fluide */
+    cursor: pointer;
+    /* Change le curseur en main */
+    border: 2px solid transparent;
+    /* Bordure invisible par défaut */
+}
+
+/* Effet au survol */
+.Sidebar li:hover {
+    border: 2px solid rgba(154, 0, 134, 1);
+    /* Bordure rose visible au survol */
+    background-color: rgba(255, 105, 180, 0.1);
+    /* Fond semi-transparent rose */
+}
+
+/* Effet pour l'élément actif */
+.Sidebar li.active {
+    background-color: #ffffff33;
+    /* Fond semi-transparent pour l'élément actif */
+}
+
+.page-title {
+    position: relative;
+    left: -300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+.page-date {
+    position: relative;
+    left: -318px;
+    top: -15px;
+
+}

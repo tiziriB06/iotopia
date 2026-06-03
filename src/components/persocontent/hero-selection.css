@@ -1,0 +1,39 @@
+.hero-selection-container {
+    min-height: 100vh;
+    width: 100%;
+    background: transparent;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 -100px;
+}
+
+.hero-selection-title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+.hero-selection-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: -400px;
+}
+
+.confirm-hero-button {
+    background-color: #9a0086;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 100px;
+}
+
+.confirm-hero-button:active {
+    transform: scale(1.1);
+}

@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(-45deg, #28264A, #270739, #2b2145);
+    background-size: 400% 400%;
+    animation: gradientBG 10s infinite alternate;
+    min-height: 100vh;
+    color: azure;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.winner-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+}
+
+.winner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    position: relative;
+}
+
+.winner-container {
+    background: rgba(161, 186, 255, 0.45);
+    border-radius: 1rem;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    z-index: 1;
+}
+
+.winner-medal img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.winner-message {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.winner-level {
+    font-weight: bold;
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+.winner-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.correct-icon {
+    color: #48c877;
+    font-size: 2rem;
+}
+
+.wrong-icon {
+    color: #f70606;
+    font-size: 2rem;
+}
+
+.winner-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    background: linear-gradient(45deg, #320674, #5d083e, #a1baff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.winner-button:hover {
+    background: #5e088e;
+}
